@@ -15,8 +15,9 @@ namespace Lemonade
         {
             string message = "";
             decimal revenue = Price * Predictivesell;
-            decimal profit = revenue - OwnerLoss;
-            message += ("Revenue was: " + revenue + "\nCost for the owner was: " + OwnerLoss + "\nOverall profit was: " +profit + "\n");
+            decimal realLoss = OwnerLoss * Predictivesell;
+            decimal profit = revenue - realLoss;
+            message += ("Revenue was: " + revenue + "\nCost for the owner was: " + realLoss + "\nOverall profit was: " +profit + "\n");
             if (profit > 0)
             {
                 message +=("This was a great idea");
