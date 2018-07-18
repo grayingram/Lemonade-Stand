@@ -56,24 +56,30 @@ namespace Lemonade
             userInput = num;
             return userInput;
         }
-        static bool isNeg(decimal num)
+        static decimal notNeg(decimal num,  string answer, string query) 
         {
-            return (num > 0.00m);
+            decimal userInput = 0;
+
+            while (num < 0)
+            {
+                Console.WriteLine("Must not be negative");
+                num = getInt(query);
+            }
+            userInput = num;
+            return userInput;
         }
         static decimal getDecimal(string question)
         {
             string response = getResponse(question);
             decimal userInput = 0;
-            bool fact = true;
-            while (fact)
+           
+            while (decimal.TryParse(response, out userInput) == false)
             {
-                while (decimal.TryParse(response, out userInput) == false)
-                {
                     Console.WriteLine("Unable to determine number. ");
                     response = getResponse(question);
-                }
-                fact = isNeg(userInput);
             }
+            userInput = notNeg(userInput, response, question);
+            
             return userInput;
         }
 
