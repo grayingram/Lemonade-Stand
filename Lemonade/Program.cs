@@ -36,21 +36,46 @@ namespace Lemonade
 
             while (int.TryParse(response, out userInput) == false)
             {
-                Console.WriteLine("Unable to determine number. ");
-                response = getResponse(question);
+               Console.WriteLine("Unable to determine number. ");
+               response = getResponse(question);
             }
+            userInput = notNeg(userInput, response, question);    
+            
             return userInput;
+        }
+        static int notNeg(int num, string answer, string query)
+        {
+            
+            int userInput = 0;
+
+            while (num < 0)
+            {
+                Console.WriteLine("Must not be negative");
+                num = getInt(query);
+            }
+            userInput = num;
+            return userInput;
+        }
+        static bool isNeg(decimal num)
+        {
+            return (num > 0.00m);
         }
         static decimal getDecimal(string question)
         {
             string response = getResponse(question);
-            decimal userInput;
-            while (decimal.TryParse(response, out userInput) == false)
+            decimal userInput = 0;
+            bool fact = true;
+            while (fact)
             {
-                Console.WriteLine("Unable to determine number. ");
-                response = getResponse(question);
+                while (decimal.TryParse(response, out userInput) == false)
+                {
+                    Console.WriteLine("Unable to determine number. ");
+                    response = getResponse(question);
+                }
+                fact = isNeg(userInput);
             }
             return userInput;
         }
+
     }
 }
