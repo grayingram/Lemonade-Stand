@@ -10,8 +10,10 @@ namespace Lemonade
             ownerStand.Name = getResponse("What do you want to name the lemonade stand?");
             ownerStand.Predictivesell = getInt("How many cups do you plan to sell?");
             ownerStand.Price = getDecimal("How much do you want to charge for cup of lemonade?");
-            Console.WriteLine(ownerStand.Name);
-            Console.WriteLine(ownerStand.Predictivesell);
+            ownerStand.OwnerLoss = getDecimal("How much will this cost you?");
+
+            
+            Console.WriteLine(ownerStand.RevealResult());
             Console.ReadLine();
             
         }
