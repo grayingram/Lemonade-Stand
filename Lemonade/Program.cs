@@ -9,6 +9,7 @@ namespace Lemonade
             Stand ownerStand = new Stand();
             ownerStand.Name = getResponse("What do you want to name the lemonade stand?");
             ownerStand.Predictivesell = getInt("How many cups do you plan to sell?");
+            ownerStand.Price = getDecimal("How much do you want to charge for cup of lemonade?");
             Console.WriteLine(ownerStand.Name);
             Console.WriteLine(ownerStand.Predictivesell);
             Console.ReadLine();
@@ -33,7 +34,18 @@ namespace Lemonade
 
             while (int.TryParse(response, out userInput) == false)
             {
-                Console.WriteLine("Unable to determine number. " + question);
+                Console.WriteLine("Unable to determine number. ");
+                response = getResponse(question);
+            }
+            return userInput;
+        }
+        static decimal getDecimal(string question)
+        {
+            string response = getResponse(question);
+            decimal userInput;
+            while (decimal.TryParse(response, out userInput) == false)
+            {
+                Console.WriteLine("Unable to determine number. ");
                 response = getResponse(question);
             }
             return userInput;
