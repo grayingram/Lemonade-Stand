@@ -48,9 +48,9 @@ namespace Lemonade
             
             int userInput = 0;
 
-            while (num < 0)
+            while ((num < 0) || (num == 0))
             {
-                Console.WriteLine("Must not be negative");
+                Console.WriteLine("Must be a nonnegative nonzero number");
                 num = getInt(query);
             }
             userInput = num;
@@ -60,9 +60,9 @@ namespace Lemonade
         {
             decimal userInput = 0;
 
-            while (num < 0)
+            while ((num < 0)||(num == 0))
             {
-                Console.WriteLine("Must not be negative");
+                Console.WriteLine("Must be a nonnegative nonzero number");
                 num = getInt(query);
             }
             userInput = num;
