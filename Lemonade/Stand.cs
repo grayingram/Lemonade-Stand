@@ -9,7 +9,7 @@ namespace Lemonade
         public string Name { get; set; }
         public int Predictivesell { get; set; }
         public decimal Price { get; set; }
-        public decimal MyDededuct { get; set; }
+        public decimal OwnerDededuct { get; set; }
 
     }
 }
