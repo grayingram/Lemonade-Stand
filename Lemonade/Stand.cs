@@ -17,18 +17,19 @@ namespace Lemonade
             decimal revenue = Price * Predictivesell;
             decimal realLoss = OwnerLoss * Predictivesell;
             decimal profit = revenue - realLoss;
-            message += ("Revenue was: " + revenue + "\nCost for the owner was: " + realLoss + "\nOverall profit was: " +profit + "\n");
+            message += ("Revenue will be: " + revenue + "\nThe expenses will be: " + realLoss + "\nOverall profit will be: " +profit + "\n");
             if (profit > 0)
             {
-                message +=("This was a great idea");
+                message +=("This is a great idea");
             }
             else
             {
-                message += ("Better luck planning next time.");
+                message += ("This is a terrible idea.");
             }
             return message;
 
         }
+        
 
     }
 }
