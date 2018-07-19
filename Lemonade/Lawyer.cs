@@ -54,7 +54,7 @@ namespace Lemonade
                 Console.WriteLine("Must be a nonnegative nonzero number");
                 num = getDecimal(query);
             }
-            userInput = num;
+            userInput = Math.Round(num, 2);
             return userInput;
         }
         public decimal getDecimal(string question)
