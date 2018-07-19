@@ -8,10 +8,10 @@ namespace Lemonade
         {
             Stand ownerStand = new Stand();
             Lawyer ownerLawyer = new Lawyer();
-            ownerStand.Name = ownerLawyer.getResponse("What do you want to name the lemonade stand?");
-            ownerStand.Predictivesell = ownerLawyer.getInt("How many cups do you plan to sell?");
-            ownerStand.Price = ownerLawyer.getDecimal("How much do you want to charge for cup of lemonade?");
-            ownerStand.OwnerLoss = ownerLawyer.getDecimal("How much will this cost you per cup?");
+            ownerStand.Name = ownerLawyer.GetResponse("What do you want to name the lemonade stand?");
+            ownerStand.Predictivesell = ownerLawyer.GetInt("How many cups do you plan to sell?");
+            ownerStand.Price = ownerLawyer.GetDecimal("How much do you want to charge for cup of lemonade?");
+            ownerStand.OwnerLoss = ownerLawyer.GetDecimal("How much will this cost you per cup?");
             Console.WriteLine(ownerStand.RevealResult());
             Console.ReadLine();
             

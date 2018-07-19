@@ -6,7 +6,7 @@ namespace Lemonade
 {
     class Lawyer
     {
-        public string getResponse(string question)
+        public string GetResponse(string question)
         {
             Console.WriteLine(question);
             string response = Console.ReadLine();
@@ -18,21 +18,21 @@ namespace Lemonade
 
             return response;
         }
-        public int getInt(string question)
+        public int GetInt(string question)
         {
-            string response = getResponse(question);
+            string response = GetResponse(question);
             int userInput;
 
             while (int.TryParse(response, out userInput) == false)
             {
                 Console.WriteLine("Unable to determine number. ");
-                response = getResponse(question);
+                response = GetResponse(question);
             }
-            userInput = notNeg(userInput, response, question);
+            userInput = NotNeg(userInput, response, question);
 
             return userInput;
         }
-        public int notNeg(int num, string answer, string query)
+        public int NotNeg(int num, string answer, string query)
         {
 
             int userInput = 0;
@@ -40,34 +40,34 @@ namespace Lemonade
             while ((num < 0) || (num == 0))
             {
                 Console.WriteLine("Must be a nonnegative nonzero number");
-                num = getInt(query);
+                num = GetInt(query);
             }
             userInput = num;
             return userInput;
         }
-        public decimal notNeg(decimal num, string answer, string query)
+        public decimal NotNeg(decimal num, string answer, string query)
         {
             decimal userInput = 0;
 
             while ((num < 0) || (num == 0))
             {
                 Console.WriteLine("Must be a nonnegative nonzero number");
-                num = getDecimal(query);
+                num = GetDecimal(query);
             }
             userInput = Math.Round(num, 2);
             return userInput;
         }
-        public decimal getDecimal(string question)
+        public decimal GetDecimal(string question)
         {
-            string response = getResponse(question);
+            string response = GetResponse(question);
             decimal userInput = 0;
 
             while (decimal.TryParse(response, out userInput) == false)
             {
                 Console.WriteLine("Unable to determine number. ");
-                response = getResponse(question);
+                response = GetResponse(question);
             }
-            userInput = notNeg(userInput, response, question);
+            userInput = NotNeg(userInput, response, question);
 
             return userInput;
         }
