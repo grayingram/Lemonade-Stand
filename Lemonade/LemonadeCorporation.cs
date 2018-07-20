@@ -16,6 +16,9 @@ namespace Lemonade
         {
             foreach (Stand stand in allStand)
             {
+                stand.SetExpenses();
+                stand.SetRevenue();
+                stand.SetProfit();
                 TotalExpenses += stand.Expenses;
                 TotalProfit += stand.Profit;
                 TotalRevenue += stand.Revenue;
