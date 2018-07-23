@@ -16,7 +16,17 @@ namespace Lemonade
             Console.WriteLine("Total Expenses for Coorporation: " + p_n_f.TotalExpenses);
             Console.WriteLine("Total Profit for Coorporation: " + p_n_f.TotalProfit);
 
+            
+            bool fact = bestLawyer.GetYesNo("Do you want to get the idividual information for each stand");
+            if (fact)
+            {
+                p_n_f.PrintIndivInfo();
 
+            }
+            else
+            {
+                Console.WriteLine("Alright have a wonderful day then.");
+            }
             
             Console.ReadLine();
             

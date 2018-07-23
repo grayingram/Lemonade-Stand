@@ -24,7 +24,19 @@ namespace Lemonade
                 TotalRevenue += stand.Revenue;
             }
         }
-
+        public void PrintIndivInfo()
+        {
+            int count = 0;
+            foreach(Stand mystand in corpStands)
+            {
+                Console.WriteLine("Here are the results for stand #" + count);
+                Console.WriteLine("The name of the stand is planned to be: " + mystand.Name);
+                Console.WriteLine("The profit is predicted for the stand is to be: " + mystand.Profit);
+                Console.WriteLine("The expenses is predicted for the stand is to be: " + mystand.Expenses);
+                Console.WriteLine("The revenue is predicted for the stand is to be: " + mystand.Revenue);
+                count++;
+            }
+        }
         public LemonadeCorporation()
         {
             Lawyer myLawyer = new Lawyer();
