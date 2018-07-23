@@ -26,7 +26,7 @@ namespace Lemonade
         }
         public void PrintIndivInfo()
         {
-            int count = 0;
+            int count = 1;
             foreach(Stand mystand in corpStands)
             {
                 Console.WriteLine("Here are the results for stand #" + count);
@@ -34,6 +34,7 @@ namespace Lemonade
                 Console.WriteLine("The revenue is predicted for the stand is to be: " + mystand.Revenue);
                 Console.WriteLine("The expenses is predicted for the stand is to be: " + mystand.Expenses);
                 Console.WriteLine("The profit is predicted for the stand is to be: " + mystand.Profit);
+                Console.ReadLine();
                 count++;
             }
         }
