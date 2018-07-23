@@ -75,7 +75,7 @@ namespace Lemonade
         {
             string response = GetResponse(question);
             response = response.ToUpper();
-            while(!(response.Equals("YES")) || !(response.Equals("NO")))
+            while(!(response.Equals("YES")) && !(response.Equals("NO")))
             {
                 Console.WriteLine("Please enter yes or no.");
                 response = GetResponse(question);

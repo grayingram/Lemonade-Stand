@@ -17,7 +17,7 @@ namespace Lemonade
             Console.WriteLine("Total Profit for Coorporation: " + p_n_f.TotalProfit);
 
             
-            bool fact = bestLawyer.GetYesNo("Do you want to get the idividual information for each stand");
+            bool fact = bestLawyer.GetYesNo("Do you want to get the individual information for each stand");
             if (fact)
             {
                 p_n_f.PrintIndivInfo();
