@@ -7,7 +7,7 @@ namespace Lemonade
     class LemonadeCorporation
     {
         public string CorpName { get; set; }
-        public List<Stand> corpStands = new List<Stand>();
+        public List<Stand> corpStands { get; set; } = new List<Stand>();
         public decimal TotalRevenue { get; set; }
         public decimal TotalExpenses { get; set; }
         public decimal TotalProfit { get; set; }
