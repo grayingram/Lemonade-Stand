@@ -6,6 +6,7 @@ namespace Lemonade
 {
     class LemonadeCorporation
     {
+        public string CorpName { get; set; }
         public List<Stand> corpStands = new List<Stand>();
         public decimal TotalRevenue { get; set; }
         public decimal TotalExpenses { get; set; }
@@ -41,6 +42,7 @@ namespace Lemonade
         public LemonadeCorporation()
         {
             Lawyer myLawyer = new Lawyer();
+            CorpName = myLawyer.GetResponse("What would you like of the corporation of lemonade stands to be called?");
             int numofStands = myLawyer.GetInt("How many lemonade stands do you want to create?");
             
             for (int i = 0; i < numofStands; i++)
