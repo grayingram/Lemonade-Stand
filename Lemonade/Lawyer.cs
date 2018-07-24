@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lemonade
+namespace LemonadeStands
 {
     class Lawyer
     {

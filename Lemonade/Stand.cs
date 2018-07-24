@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Lemonade
+namespace LemonadeStands
 {
     class Stand
     {
@@ -40,6 +40,23 @@ namespace Lemonade
         {
             return Profit;
         }
+        public void SetStands(Lawyer myLawyer, List<Stand> aStand)
+        {
+            int numofStands = myLawyer.GetInt("How many lemonade stands do you want to create?");
+
+            for (int i = 0; i < numofStands; i++)
+            {
+                var ownerStand = new Stand();
+                Console.WriteLine("For Stand #" + (i + 1));
+                ownerStand.Name = myLawyer.GetResponse("What do you want to name this lemonade stand?");
+
+                ownerStand.Predictivesell = myLawyer.GetInt("How many cups do you plan to sell at this stand?");
+                ownerStand.Price = myLawyer.GetDecimal("How much do you want to charge for cup of lemonade at this stand?");
+                ownerStand.OwnerLoss = myLawyer.GetDecimal("How much will this cost you per cup for this stand?");
+                aStand.Add(ownerStand);
+            }
+        }
+
         /*public string RevealResult()
         {
             string message = "";
@@ -58,7 +75,7 @@ namespace Lemonade
             return message;
 
         }*/
-        
+
 
     }
 }
