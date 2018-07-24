@@ -18,12 +18,10 @@ namespace LemonadeStands
         {
             Revenue = Price * Predictivesell;
         }
-
         public void SetExpenses()
         {
             Expenses = OwnerLoss * Predictivesell;
         }
-
         public void SetProfit()
         {
             Profit = Revenue - Expenses;

@@ -23,9 +23,7 @@ namespace LemonadeStands
             }
             Console.WriteLine("Total Revenue for Coorporation: " + p_n_f.TotalRevenue);
             Console.WriteLine("Total Expenses for Coorporation: " + p_n_f.TotalExpenses);
-            Console.WriteLine("Total Profit for Coorporation: " + p_n_f.TotalProfit);
-
-            
+            Console.WriteLine("Total Profit for Coorporation: " + p_n_f.TotalProfit);           
             bool fact = bestLawyer.GetYesNo("Do you want to get the individual information for each stand");
             if (fact)
             {
